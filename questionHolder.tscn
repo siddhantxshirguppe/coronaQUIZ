@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node.gd" type="Script" id=1]
+
+[node name="questionHolder" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "you have cough.take meds?"
+answer = true
+healthyes = 3
+moneyyes = -2
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "order swiggy?"
+moneyyes = -3
+foodyes = 3
+
+[node name="Node3" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "risk going out to buy meds?"
+healthyes = 3
+moneyyes = -2
+moneyno = 3
+
+[node name="Node4" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "play videogames?"
+answer = true
+healthyes = 2
+healthno = -3
+
+[node name="Node5" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "drink gomutra to cure corona?"
+answer = true
+healthyes = -21
+moneyyes = -10
+moneyno = 2
+foodno = 3
+
+[node name="Node6" type="Node" parent="."]
+script = ExtResource( 1 )
+fact = "wash hands?"
+answer = true
+healthyes = 5
+moneyyes = -3
