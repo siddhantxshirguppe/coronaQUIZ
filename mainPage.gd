@@ -62,10 +62,3 @@ func _on_Button2_pressed():
 		print("you are wrong\n")
 	
 	setQuestion()
-	
-
-		
-		
-		
-		
-		
