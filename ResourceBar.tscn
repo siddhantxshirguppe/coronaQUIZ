@@ -1,0 +1,32 @@
+[gd_scene format=2]
+
+[node name="ResourceBar" type="Control"]
+margin_right = 100.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 32.3
+margin_top = 200.0
+margin_right = 232.3
+margin_bottom = 230.0
+grow_horizontal = 0
+rect_rotation = -90.0
+value = 50.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -24.5636
+margin_top = 207.691
+margin_right = 125.436
+margin_bottom = 237.691
+text = "resource_name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

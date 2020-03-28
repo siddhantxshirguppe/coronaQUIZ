@@ -19,6 +19,13 @@ config/name="quiz"
 run/main_scene="res://mainPage.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=360
+window/size/height=740
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
