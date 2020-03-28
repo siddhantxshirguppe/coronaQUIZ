@@ -10,5 +10,19 @@ export (int) var healthno
 export (int) var moneyno
 export (int) var sanityno
 
-export (String) var popupyes = "popupyes_text"
-export (String) var popupno ="popupno_text"
+export(String) var choiceA
+export(String) var choiceB
+export (String) var popupyes 
+export (String) var popupno 
+
+export (int) var healthyes1
+export (int) var moneyyes1
+export (int) var sanityyes1
+
+export (int) var healthyes2
+export (int) var moneyyes2
+export (int) var sanityyes2
+
+export(int) var person
+export(String) var profession
+

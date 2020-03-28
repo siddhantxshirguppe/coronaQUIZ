@@ -23,10 +23,26 @@ func _ready():
 	randomize();
 	print(randi()%5)
 	setQuestion()
+	$Message/personSprite.texture=load("res://doorMan.png")
+
+
+func setSprite(a):
+	if a.person==1:
+		$Message/personSprite.texture=load("res://doorMan.png")
+		$Message/name.text=a.profession
+	if a.person==2:
+		$Message/personSprite.texture=load("res://kid.png")	
+	if a.person==3:
+		$Message/personSprite.texture=load("res://wife.png")
+	if a.person==4:
+		$Message/personSprite.texture=load("res://window.png")
+		
+		
 	
 func setQuestion():
-	questionnode=questionbanknode.get_child(randi()%5)
+	questionnode=questionbanknode.get_child(randi()%6)
 	var questiontext = questionnode.fact
+	setSprite(questionnode)
 	print(questiontext)
 	$QuestionPanel/Label.text = questiontext
 	answer = questionnode.answer
@@ -36,13 +52,13 @@ func updateStats(decision):
 		changeH += questionnode.healthyes
 		changeM += questionnode.moneyyes
 		changeS += questionnode.sanityyes
-		$Message/Label.text = questionnode.popupyes
+		$info/Label.text = questionnode.popupyes
 	
 	if decision == false:
 		changeH += questionnode.healthno
 		changeM += questionnode.moneyno
 		changeS += questionnode.sanityno
-		$Message/Label.text = questionnode.popupno
+		$info/Label.text = questionnode.popupno
 	
 	update_resource_ui()
 
@@ -62,5 +78,8 @@ func _on_Button2_pressed():
 		print("you are correct!\n")
 	else:
 		print("you are wrong\n")
-	
 	setQuestion()
+
+
+func _on_ok_pressed():
+	$info.hide()

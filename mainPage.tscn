@@ -9,17 +9,18 @@ script = ExtResource( 1 )
 questionbankpath = NodePath("questionHolder")
 
 [node name="QuestionPanel" type="Panel" parent="."]
-margin_top = -1.0
-margin_right = 360.0
-margin_bottom = 128.0
+margin_top = 10.0
+margin_right = 365.0
+margin_bottom = 154.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="QuestionPanel"]
-margin_top = 36.0
-margin_right = 360.0
-margin_bottom = 129.0
+margin_left = 3.96283
+margin_top = 0.212746
+margin_right = 363.963
+margin_bottom = 93.2127
 text = "questions display here"
 align = 1
 valign = 1
@@ -28,16 +29,19 @@ __meta__ = {
 }
 
 [node name="Message" type="Panel" parent="."]
-margin_top = 128.0
-margin_right = 360.0
-margin_bottom = 257.0
+margin_left = -2.26495
+margin_top = 145.914
+margin_right = 361.735
+margin_bottom = 281.914
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Message"]
-margin_right = 360.0
-margin_bottom = 116.0
+[node name="name" type="Label" parent="Message"]
+margin_left = 120.0
+margin_top = 96.0
+margin_right = 251.0
+margin_bottom = 122.0
 text = "info messages"
 align = 1
 valign = 1
@@ -45,10 +49,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="personSprite" type="Sprite" parent="Message"]
+position = Vector2( 173, -2 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="ResourcesPanel" type="Panel" parent="."]
-margin_top = 244.0
-margin_right = 360.0
-margin_bottom = 533.0
+margin_left = 2.18924
+margin_top = 261.736
+margin_right = 362.189
+margin_bottom = 550.736
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,8 +116,44 @@ __meta__ = {
 }
 
 [node name="questionHolder" parent="." instance=ExtResource( 2 )]
+
+[node name="info" type="Panel" parent="."]
+modulate = Color( 0.964706, 0.941176, 0.941176, 1 )
+margin_left = 11.0975
+margin_top = 314.172
+margin_right = 352.098
+margin_bottom = 731.172
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="info"]
+modulate = Color( 0.960784, 0.898039, 0.898039, 1 )
+self_modulate = Color( 0.988235, 0.972549, 0.972549, 1 )
+margin_left = 41.5446
+margin_top = 31.8219
+margin_right = 284.545
+margin_bottom = 179.822
+text = "make sure you and your family survive the quarantine!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ok" type="Button" parent="info"]
+margin_left = 4.0
+margin_top = 289.228
+margin_right = 336.0
+margin_bottom = 398.228
+text = "ok"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="OptionsPanel/yesbutton" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="OptionsPanel/nobutton" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="info/ok" to="." method="_on_ok_pressed"]
 
 [editable path="ResourcesPanel/HealthResourceBar"]
 
