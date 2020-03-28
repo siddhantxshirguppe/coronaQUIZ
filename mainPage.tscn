@@ -54,26 +54,26 @@ __meta__ = {
 }
 
 [node name="HealthResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
-margin_top = 110.03
-margin_bottom = 310.03
+margin_top = 54.4588
+margin_bottom = 254.459
 
 [node name="Label" parent="ResourcesPanel/HealthResourceBar" index="1"]
 text = "health"
 
 [node name="MoneyResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
 margin_left = 135.837
-margin_top = 110.03
+margin_top = 54.4588
 margin_right = 235.837
-margin_bottom = 310.03
+margin_bottom = 254.459
 
 [node name="Label" parent="ResourcesPanel/MoneyResourceBar" index="1"]
 text = "money"
 
 [node name="SanityResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
 margin_left = 260.401
-margin_top = 110.03
+margin_top = 54.4588
 margin_right = 360.401
-margin_bottom = 310.03
+margin_bottom = 254.459
 
 [node name="Label" parent="ResourcesPanel/SanityResourceBar" index="1"]
 text = "sanity"
