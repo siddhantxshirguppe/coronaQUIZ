@@ -15,7 +15,6 @@ moneyyes = -2
 script = ExtResource( 1 )
 fact = "order swiggy?"
 moneyyes = -3
-foodyes = 3
 
 [node name="Node3" type="Node" parent="."]
 script = ExtResource( 1 )
@@ -38,7 +37,6 @@ answer = true
 healthyes = -21
 moneyyes = -10
 moneyno = 2
-foodno = 3
 
 [node name="Node6" type="Node" parent="."]
 script = ExtResource( 1 )

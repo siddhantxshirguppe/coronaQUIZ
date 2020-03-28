@@ -11,7 +11,7 @@ questionbankpath = NodePath("questionHolder")
 [node name="QuestionPanel" type="Panel" parent="."]
 margin_top = -1.0
 margin_right = 360.0
-margin_bottom = 164.0
+margin_bottom = 128.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -27,8 +27,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Message" type="Panel" parent="."]
+margin_top = 128.0
+margin_right = 360.0
+margin_bottom = 257.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Message"]
+margin_right = 360.0
+margin_bottom = 116.0
+text = "info messages"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ResourcesPanel" type="Panel" parent="."]
-margin_top = 164.0
+margin_top = 244.0
 margin_right = 360.0
 margin_bottom = 533.0
 __meta__ = {

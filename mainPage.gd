@@ -8,15 +8,15 @@ var answer
 var questionnode
 var changeH  = 20
 var changeM  = 50
-var changeF  = 50
+var changeS  = 50
 
 func update_resource_ui():
 	$ResourcesPanel/HealthResourceBar/Label.text = "health: " + str(changeH)
 	$ResourcesPanel/HealthResourceBar/ProgressBar.value = changeH
 	$ResourcesPanel/MoneyResourceBar/Label.text = "money: " + str(changeM)
 	$ResourcesPanel/MoneyResourceBar/ProgressBar.value = changeM
-	$ResourcesPanel/SanityResourceBar/Label.text = "sanity: " + str(changeF)
-	$ResourcesPanel/SanityResourceBar/ProgressBar.value = changeF
+	$ResourcesPanel/SanityResourceBar/Label.text = "sanity: " + str(changeS)
+	$ResourcesPanel/SanityResourceBar/ProgressBar.value = changeS
 
 func _ready():
 	update_resource_ui()
@@ -35,12 +35,14 @@ func updateStats(decision):
 	if decision == true:
 		changeH += questionnode.healthyes
 		changeM += questionnode.moneyyes
-		changeF += questionnode.foodyes
+		changeS += questionnode.sanityyes
+		$Message/Label.text = questionnode.popupyes
 	
 	if decision == false:
 		changeH += questionnode.healthno
 		changeM += questionnode.moneyno
-		changeF += questionnode.foodno
+		changeS += questionnode.sanityno
+		$Message/Label.text = questionnode.popupno
 	
 	update_resource_ui()
 
