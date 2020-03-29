@@ -1,8 +1,10 @@
 extends Node
 
 export (NodePath) var questionbankpath
+export (NodePath) var sfxbankpath
 
 onready var questionbanknode = get_node(questionbankpath)
+onready var sfxnode = get_node(sfxbankpath)
 
 var answer
 var questionnode
@@ -63,21 +65,18 @@ func updateStats(decision):
 	update_resource_ui()
 
 func _on_Button_pressed():
+	sfxnode.get_child(7).play();
+	
 	updateStats(false)
-	if answer == true :
-		print("you are correct!\n")
 
-	else:
-		print("you are wrong\n")
 	setQuestion()
 
 
 func _on_Button2_pressed():
+	sfxnode.get_child(6).play();
+	
 	updateStats(true)
-	if answer == false :
-		print("you are correct!\n")
-	else:
-		print("you are wrong\n")
+
 	setQuestion()
 
 

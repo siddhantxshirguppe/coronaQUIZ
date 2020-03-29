@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/possel.wav-907f5cc31157223a88970f7a28a6df8a.sample"
+
+[deps]
+
+source_file="res://Music/possel.wav"
+dest_files=[ "res://.import/possel.wav-907f5cc31157223a88970f7a28a6df8a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

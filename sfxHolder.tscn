@@ -1,0 +1,49 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Music/back.wav" type="AudioStream" id=1]
+[ext_resource path="res://Music/child.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music/cough.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music/gameover.wav" type="AudioStream" id=4]
+[ext_resource path="res://Music/goodnotif.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music/door.wav" type="AudioStream" id=6]
+[ext_resource path="res://Music/possel.wav" type="AudioStream" id=7]
+[ext_resource path="res://Music/negsel.wav" type="AudioStream" id=8]
+[ext_resource path="res://Music/radio.wav" type="AudioStream" id=9]
+[ext_resource path="res://Music/sanity.wav" type="AudioStream" id=10]
+[ext_resource path="res://Music/wife.wav" type="AudioStream" id=11]
+
+[node name="sfxHolder" type="Node2D"]
+
+[node name="back" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+
+[node name="child" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="cough" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="door" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="gameover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="goodnotif" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="negsel" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+
+[node name="possel" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = 13.439
+
+[node name="sanity" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+
+[node name="radio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+
+[node name="wife" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )

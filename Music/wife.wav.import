@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wife.wav-412fb1d80fdd8e28f9b4eb98cb5bc343.sample"
+
+[deps]
+
+source_file="res://Music/wife.wav"
+dest_files=[ "res://.import/wife.wav-412fb1d80fdd8e28f9b4eb98cb5bc343.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://mainPage.gd" type="Script" id=1]
 [ext_resource path="res://questionHolder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ResourceBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sfxHolder.tscn" type="PackedScene" id=4]
 
 [node name="Control" type="Node"]
 script = ExtResource( 1 )
 questionbankpath = NodePath("questionHolder")
+sfxbankpath = NodePath("sfxHolder")
 
 [node name="QuestionPanel" type="Panel" parent="."]
-margin_top = 10.0
-margin_right = 365.0
-margin_bottom = 154.0
+margin_left = 4.64819
+margin_top = 12.0
+margin_right = 360.648
+margin_bottom = 156.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -63,26 +66,28 @@ __meta__ = {
 }
 
 [node name="HealthResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
-margin_top = 54.4588
-margin_bottom = 254.459
+margin_left = 1.10803
+margin_top = 38.9464
+margin_right = 101.108
+margin_bottom = 238.947
 
 [node name="Label" parent="ResourcesPanel/HealthResourceBar" index="1"]
 text = "health"
 
 [node name="MoneyResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
-margin_left = 135.837
-margin_top = 54.4588
-margin_right = 235.837
-margin_bottom = 254.459
+margin_left = 134.729
+margin_top = 36.7303
+margin_right = 234.729
+margin_bottom = 236.73
 
 [node name="Label" parent="ResourcesPanel/MoneyResourceBar" index="1"]
 text = "money"
 
 [node name="SanityResourceBar" parent="ResourcesPanel" instance=ExtResource( 3 )]
-margin_left = 260.401
-margin_top = 54.4588
-margin_right = 360.401
-margin_bottom = 254.459
+margin_left = 255.969
+margin_top = 38.9464
+margin_right = 355.969
+margin_bottom = 238.947
 
 [node name="Label" parent="ResourcesPanel/SanityResourceBar" index="1"]
 text = "sanity"
@@ -118,6 +123,7 @@ __meta__ = {
 [node name="questionHolder" parent="." instance=ExtResource( 2 )]
 
 [node name="info" type="Panel" parent="."]
+visible = false
 modulate = Color( 0.964706, 0.941176, 0.941176, 1 )
 margin_left = 11.0975
 margin_top = 314.172
@@ -151,6 +157,8 @@ text = "ok"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="sfxHolder" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="OptionsPanel/yesbutton" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="OptionsPanel/nobutton" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="info/ok" to="." method="_on_ok_pressed"]
